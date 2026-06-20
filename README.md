@@ -1,6 +1,6 @@
 # CSE Quiz Application
 
-A simple, browser-based quiz application built using **HTML, CSS, and Vanilla JavaScript**, created as a B.Tech Computer Science Engineering end-semester mini project.
+A browser-based quiz application built using **HTML, CSS, and Vanilla JavaScript**, created as a project for end-semester.
 
 The quiz contains **56 multiple choice questions** covering core CSE subjects:
 - C Programming
@@ -15,8 +15,7 @@ The quiz contains **56 multiple choice questions** covering core CSE subjects:
 
 ## 1. Project Overview
 
-This project simulates a real exam-style quiz where the user answers one question at a time, under a time limit, and receives a final score with percentage at the end. It is built without any external library or framework — only plain HTML, CSS, and JavaScript — so that every line of logic can be explained during a viva.
-
+This project simulates a real exam-style quiz where the user answers one question at a time, under a time limit, and receives a final score with percentage at the end. It is built without any external library or framework — only plain HTML, CSS, and JavaScript.
 ---
 
 ## 2. Folder Structure
