@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE Quiz Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="app-header">
+      <h1>CSE Quiz Application</h1>
+      <p>C | Java | JavaScript | HTML | CSS | DBMS | DSA (C++)</p>
+    </header>
+
+    <div id="start-screen" class="screen">
+      <h2>Welcome to the Quiz</h2>
+      <p>
+        This quiz contains
+        <span id="total-questions-display">0</span>
+        multiple choice questions from core Computer Science subjects.
+      </p>
+
+      <ul class="info-list">
+        <li>Each question carries a timer of 30 seconds.</li>
+        <li>You cannot change your answer once selected.</li>
+        <li>Your score will be calculated at the end.</li>
+      </ul>
+
+      <p class="high-score-line">
+        Your Current High Score:
+        <span id="start-high-score">0</span>
+      </p>
+
+      <button id="start-btn" class="btn primary-btn">
+        Start Quiz
+      </button>
+    </div>
+
+    <div id="quiz-screen" class="screen hidden">
+
+      <div class="quiz-top-bar">
+        <span id="question-number">Question 1 of 50</span>
+        <span id="score-text">Score: 0</span>
+        <span id="timer-text">Time Left: 30s</span>
+      </div>
+
+      <div class="progress-bar-outer">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+
+      <h3 id="question-text">Question goes here</h3>
+
+      <div id="options-container" class="options-container"></div>
+
+      <div class="nav-buttons">
+        <button id="prev-btn" class="btn secondary-btn">Previous</button>
+        <button id="next-btn" class="btn primary-btn">Next</button>
+      </div>
+
+    </div>
+
+    <div id="result-screen" class="screen hidden">
+      <h2>Quiz Completed!</h2>
+
+      <div class="result-box">
+        <p>Your Score: <span id="final-score-text">0 / 0</span></p>
+        <p>Percentage: <span id="percentage-text">0%</span></p>
+        <p>High Score: <span id="high-score-text">0</span></p>
+      </div>
+
+      <p id="result-message" class="result-message"></p>
+
+      <button id="restart-btn" class="btn primary-btn">
+        Restart Quiz
+      </button>
+    </div>
+
+  </div>
+
+  <footer class="app-footer">
+    <p>
+      B.Tech CSE  Project &mdash; Quiz Application (HTML, CSS &amp; JavaScript)
+      <br>
+      Made by &mdash; Abhishek Singh , Kashik Ojha , Rahul Roy , Himanshu Kumar , Drishty Pandey & Shreyansh Singh .
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
