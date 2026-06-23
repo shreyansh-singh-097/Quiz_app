@@ -20,13 +20,13 @@ This project simulates a real exam-style quiz where the user answers one questio
 
 ## 2. Folder Structure
 
-```
+
 Quiz-App/
 │
 ├── index.html      # Page structure (Start screen, Quiz screen, Result screen)
 ├── style.css       # All styling (layout, colors, responsiveness)
 └── script.js       # All quiz logic (questions data, timer, scoring, localStorage)
-```
+
 
 ---
 
