@@ -1,116 +1,184 @@
-# CSE Quiz Application
+# 🎯 CSE Quiz Application
 
-A browser-based quiz application built using **HTML, CSS, and Vanilla JavaScript**, created as a project for end-semester.
+A simple and interactive **Computer Science Engineering (CSE) Quiz Application** built using **HTML, CSS, and JavaScript**. The application helps students test their knowledge across multiple core CSE subjects through multiple-choice questions with a timer, score tracking, and high score storage.
 
-The quiz contains **56 multiple choice questions** covering core CSE subjects:
+---
+
+## 📌 Features
+
+- ✅ Multiple Choice Questions (MCQs)
+- ⏱️ 30-second timer for each question
+- 📊 Live progress bar
+- 📝 Previous and Next navigation
+- 🎯 Instant answer validation
+- 🏆 High score saved using Local Storage
+- 📈 Final score and percentage calculation
+- 📱 Fully responsive design
+- 🔄 Restart quiz option
+
+---
+
+## 📚 Subjects Covered
+
+The quiz currently includes questions from:
+
 - C Programming
 - Java
 - JavaScript
 - HTML
 - CSS
 - DBMS
-- DSA using C++
+- Data Structures & Algorithms (C++)
 
 ---
 
-## 1. Project Overview
+## 🛠️ Technologies Used
 
-This project simulates a real exam-style quiz where the user answers one question at a time, under a time limit, and receives a final score with percentage at the end. It is built without any external library or framework — only plain HTML, CSS, and JavaScript.
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- Browser Local Storage
+
 ---
 
-## 2. Folder Structure
+## 📂 Project Structure
 
-
-Quiz-App/
+```
+CSE-Quiz-Application/
 │
-├── index.html      # Page structure (Start screen, Quiz screen, Result screen)
-├── style.css       # All styling (layout, colors, responsiveness)
-└── script.js       # All quiz logic (questions data, timer, scoring, localStorage)
-
-
----
-
-## 3. Features
-
-- 56 multiple choice questions from 7 CSE subjects
-- Start Quiz screen with instructions
-- One question shown at a time
-- Next and Previous navigation buttons
-- Progress bar + "Question X of 56" indicator
-- 30 second countdown timer per question
-- Auto move to next question when timer ends
-- Answer locking — once selected, the option cannot be changed
-- Correct answer highlighted in **green**, wrong answer in **red**
-- Live score tracking while attempting the quiz
-- Final result screen with score and percentage
-- High score saved in the browser using `localStorage` (persists even after closing the browser)
-- Restart Quiz option
-- Fully responsive layout for mobile and desktop
+├── index.html      # Main HTML file
+├── style.css       # Styling of the application
+├── script.js       # Quiz logic and questions
+└── README.md       # Project documentation
+```
 
 ---
 
-## 4. How to Run This Project
+## 🚀 How to Run
 
-1. Download / clone the `Quiz-App` folder.
-2. Open the folder on your computer.
-3. Double-click `index.html` to open it directly in any web browser
+1. Download or clone this repository.
 
-   **OR**
+```bash
+git clone https://github.com/your-username/CSE-Quiz-Application.git
+```
 
-4. Open the folder in VS Code and run it using the "Live Server" extension.
+2. Open the project folder.
 
-No installation, no build step, and no internet connection is required — it runs completely offline.
+3. Double-click **index.html**
+   or open it using any web browser.
 
----
-
-## 5. Technology Used
-
-| Technology | Purpose |
-|------------|---------|
-| HTML5      | Page structure and content |
-| CSS3       | Styling and responsive layout |
-| JavaScript (ES6) | Quiz logic, DOM manipulation, timer, localStorage |
-
-No Bootstrap, no React, no Tailwind, no external JS libraries are used.
+No additional installation or dependencies are required.
 
 ---
 
-## 6. Explanation of Major Functions (script.js)
+## 🎮 How to Play
 
-| Function | Purpose |
-|----------|---------|
-| `startQuiz()` | Resets all variables and displays the first question when "Start Quiz" is clicked |
-| `loadQuestion()` | Renders the current question, builds its 4 option buttons, updates the progress bar and question counter, and restarts the timer |
-| `selectOption(index, optionBtn)` | Runs when the user clicks an option. Locks the answer, applies green/red highlighting, updates the score, and disables further clicks |
-| `startTimer()` | Starts a 30-second countdown using `setInterval()`. Auto-advances to the next question if time runs out |
-| `goToNextQuestion()` | Moves to the next question, or calls `showResult()` if it was the last question |
-| `goToPreviousQuestion()` | Moves back one question so the user can review their earlier answer |
-| `showResult()` | Calculates the final score and percentage, compares it with the saved high score in `localStorage`, and displays the result screen |
-| `restartQuiz()` | Returns the user to the start screen so the quiz can be attempted again |
+1. Click **Start Quiz**.
+2. Read the question carefully.
+3. Select one option.
+4. Once an option is selected, it cannot be changed.
+5. If time runs out, the quiz automatically moves to the next question.
+6. After completing all questions, your final score and percentage will be displayed.
 
 ---
 
-## 7. Core Logic Used
+## 📊 Scoring System
 
-- **Arrays of Objects** — All 56 questions are stored as an array of objects (`question`, `options`, `answer`).
-- **DOM Manipulation** — `document.createElement()`, `appendChild()`, `classList.add()` are used to dynamically generate option buttons for every question instead of hardcoding them in HTML.
-- **Event Listeners** — `addEventListener("click", ...)` is used for all button interactions.
-- **setInterval() / clearInterval()** — Used to implement the 30-second per-question timer.
-- **localStorage** — Used to permanently store the user's high score in the browser using `localStorage.setItem()` and `localStorage.getItem()`.
-- **Conditional Rendering** — `classList` is used to show/hide screens (`start-screen`, `quiz-screen`, `result-screen`) using a simple `hidden` CSS class instead of any framework.
+- ✔ Correct Answer = **+1 Mark**
+- ❌ Wrong Answer = **0 Marks**
+- ⏭ Skipped Question = **0 Marks**
+- 🚫 No Negative Marking
 
 ---
 
-## 8. Possible Future Enhancements
+## ⏳ Timer
 
-- Add subject-wise quiz selection (e.g., only DBMS or only Java)
-- Add a question review screen at the end showing all correct/wrong answers
-- Add sound effects for correct/wrong answers
-- Store quiz history (multiple attempts) instead of only the high score
-- Add a dark mode toggle
+- Every question has **30 seconds**.
+- Timer automatically moves to the next question after time expires.
+- Last 10 seconds are highlighted as a warning.
 
 ---
 
-## 9. Author
+## 🏆 High Score
 
-Developed as a B.Tech CSE end-semester mini project to demonstrate practical use of HTML, CSS, and core JavaScript concepts (DOM manipulation, events, timers, and browser storage).
+The application stores your highest score using **Browser Local Storage**.
+
+This means your high score remains saved even after refreshing the page (unless browser data is cleared).
+
+---
+
+## 📱 Responsive Design
+
+The application is optimized for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile Devices
+
+---
+
+## 🔮 Future Improvements
+
+Some features that can be added:
+
+- Login & User Authentication
+- Randomized Questions
+- Difficulty Levels
+- Subject-wise Quiz
+- Question Review Section
+- Leaderboard
+- Dark Mode
+- Sound Effects
+- Question Database/API Integration
+- Certificate Generation
+
+---
+
+## 👨‍💻 Project Team
+
+Developed as a **B.Tech CSE Project** by:
+
+- Abhishek Singh
+- Kashik Ojha
+- Rahul Roy
+- Himanshu Kumar
+- Drishty Pandey
+- Shreyansh Singh
+
+---
+
+## 📄 License
+
+This project is developed for educational purposes.
+
+You are free to use and modify it for learning and academic projects.
+
+---
+
+## ⭐ Preview
+
+```
+Welcome Screen
+      ↓
+Start Quiz
+      ↓
+Question with Timer
+      ↓
+Answer Validation
+      ↓
+Next Question
+      ↓
+Final Result
+      ↓
+High Score Saved
+```
+
+---
+
+## 🙌 Acknowledgement
+
+This project was created as part of a **B.Tech Computer Science Engineering** academic project to demonstrate the use of **HTML, CSS, and JavaScript** in building an interactive web application.
+
+---
+**Happy Learning! 🚀**
